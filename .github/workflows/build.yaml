@@ -36,7 +36,7 @@ jobs:
       - name: build and test
         uses: ros-tooling/action-ros-ci@master
         with:
-          import-token: ${{ secrets.REPO_TOKEN }}
-          package-name: dummy_pkg
+          # import-token: ${{ secrets.REPO_TOKEN }} for private repos, create a github secret token and use it here
+          package-name: dummy_pkg # add as many packages from this repo as you need seperated by a space
           target-ros2-distro: ${{ matrix.ros_distribution }}
           vcs-repo-file-url: ""
